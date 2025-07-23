@@ -1,0 +1,159 @@
+/* ---- BODY ---- */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #000000; /* Fondo oscuro elegante */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #f4f4f4; /* Texto claro */
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* ---- MAIN ---- */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+
+/* ---- IMG ---- */
+img {
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+}
+
+img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.9);
+}
+
+/* ---- CONTAINER ---- */
+.container {
+  margin-top: 140px;
+  padding: 20px;
+  background-color: #744242; /* Oscuro con opacidad */
+  border-radius: 12px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.container:hover {
+  background-color: #054631;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* ---- BOTÓN ---- */
+.btn-b {
+  background-color: #0e7326;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  font-size: 17px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-b i {
+  margin-right: 8px;
+}
+
+.btn-b:hover {
+  background-color: #215188;
+  transform: scale(1.08);
+  box-shadow: 0 4px 15px rgba(70, 202, 4, 0.5);
+}
+
+/* ---- MODAL ---- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
+}
+
+/* ---- MODAL ANIMADO ---- */
+.modal-content {
+  background-color: #783636;
+  color: #0d0d0d;
+  margin: 8% auto;
+  padding: 40px 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 12px 30px rgba(210, 196, 196, 0.6);
+  position: relative;
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s ease;
+}
+
+.modal-content.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.modal-content h2 {
+  color: #fffbfb; /* Verde neón */
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  font-size: 15px;
+  color: #fffafa;
+  margin-bottom: 25px;
+}
+
+.modal-content input[type="email"] {
+  width: 90%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 2px solid #f7f7f7;
+  background: #ffffff;
+  color: #000000;
+  font-size: 16px;
+  transition: border 0.3s ease, background 0.3s ease;
+}
+
+.modal-content input[type="email"]:focus {
+  border: 1px solid #00ffb3;
+  background: #ffffff;
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #888;
+  cursor: pointer;
+  transition: color 5s ease;
+}
+ .modal-content.success {
+  background-color: #096904;
+  color: #f1f1f1;
+  text-align: center;
+  animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+.close:hover {
+  color: #00ffb3;
+}
