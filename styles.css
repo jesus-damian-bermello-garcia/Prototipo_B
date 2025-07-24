@@ -29,11 +29,6 @@ img {
   margin: auto;
 }
 
-img:hover {
-  transform: scale(1.15);
-  box-shadow: 0 0 35px rgba(0, 0, 0, 0.9);
-}
-
 /* ---- CONTAINER ---- */
 .container {
   margin-top: 140px;
