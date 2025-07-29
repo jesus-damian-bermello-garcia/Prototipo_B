@@ -25,22 +25,30 @@ nav {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
+  min-height: 60px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin: 0 15px;
   font-weight: bold;
-  padding: 8px 15px;
-  border-radius: 5px;
+  padding: 12px 20px;
+  border-radius: 8px;
   transition: all 0.3s ease;
+  font-size: 16px;
+  min-width: 100px;
+  text-align: center;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid transparent;
 }
 
 nav a:hover {
   color: #dcd508;
-  background-color: rgba(220, 213, 8, 0.1);
+  background-color: rgba(220, 213, 8, 0.2);
+  border-color: #dcd508;
+  transform: translateY(-2px);
 }
 
 /* Contenedor principal */
@@ -350,15 +358,15 @@ main img {
   }
 
   nav {
-    padding: 0.8rem;
-    flex-direction: column;
-    gap: 8px;
+    padding: 1.2rem;
+    gap: 12px;
+    min-height: 70px;
   }
 
   nav a {
-    margin: 0 8px;
-    padding: 6px 12px;
-    font-size: 14px;
+    padding: 14px 24px;
+    font-size: 16px;
+    min-width: 120px;
   }
 
   .page-title {
@@ -413,18 +421,22 @@ main img {
   }
 
   nav {
-    padding: 0.6rem;
-    text-align: center;
+    padding: 1rem;
+    flex-direction: column;
+    gap: 8px;
+    min-height: auto;
   }
 
   nav a {
     display: block;
-    margin: 5px auto;
-    padding: 8px 15px;
-    font-size: 13px;
     width: 90%;
-    max-width: 200px;
+    max-width: 250px;
+    padding: 16px 20px;
+    font-size: 16px;
+    margin: 0 auto 8px auto;
     text-align: center;
+    min-height: 50px;
+    line-height: 1.2;
   }
 
   .page-title {
@@ -528,9 +540,15 @@ main img {
     font-size: 1.4rem;
   }
 
+  nav {
+    padding: 0.8rem;
+  }
+
   nav a {
-    font-size: 12px;
-    padding: 6px 12px;
+    font-size: 15px;
+    padding: 14px 16px;
+    width: 95%;
+    min-height: 48px;
   }
 
   .service-card, .contact-card {
