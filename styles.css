@@ -9,12 +9,14 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #f4f4f4;
+  background-color: #f7e7e7;
 }
 
 /* Navegación */
 nav {
-  background: #2c3e50;
+  position: sticky;
+  top: 0;
+  background: #662e0e;
   padding: 1rem;
   text-align: center;
 }
@@ -27,7 +29,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #3498db;
+  color: #dcd508;
 }
 
 /* Contenedor principal */
