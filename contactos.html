@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contactos</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="contactos.html">Contactos</a>
+  </nav>
+  <div class="container">
+    <h1 class="page-title">Contáctanos</h1>
+    <p class="subtitle">Estamos aquí para ayudarte. Elige la forma que prefieras para comunicarte con nosotros</p>
+    
+    <div class="contact-grid">
+      <!-- Tarjeta de Correos -->
+      <div class="contact-card email-card">
+        <div class="card-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <h3>Correos Electrónicos</h3>
+        <div class="contact-info">
+          <div class="email-item">
+            <i class="fas fa-user"></i>
+            <a href="mailto:jbermello9564@utm.edu.ec">jbermello9564@utm.edu.ec</a>
+          </div>
+          <div class="email-item">
+            <i class="fas fa-user"></i>
+            <a href="mailto:nmoreno1664@utm.edu.ec">nmoreno1664@utm.edu.ec</a>
+          </div>
+          <div class="email-item">
+            <i class="fas fa-user"></i>
+            <a href="mailto:jjimenez9211@utm.edu.ec">jjimenez9211@utm.edu.ec</a>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="response-time">Respuesta en 24h</span>
+        </div>
+      </div>
+
+      <!-- Tarjeta de Teléfono -->
+      <div class="contact-card phone-card">
+        <div class="card-icon">
+          <i class="fas fa-phone"></i>
+        </div>
+        <h3>Teléfono</h3>
+        <div class="contact-info">
+          <div class="phone-number">
+            <a href="tel:+593960235751">+593 96 023 5751</a>
+          </div>
+          <p>Llamadas y WhatsApp disponibles</p>
+        </div>
+        <div class="card-footer">
+          <a href="tel:+593960235751" class="btn-call">
+            <i class="fas fa-phone"></i>
+            Llamar Ahora
+          </a>
+        </div>
+      </div>
+
+      <!-- Tarjeta de Ubicación -->
+      <div class="contact-card location-card">
+        <div class="card-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3>Nuestra Ubicación</h3>
+        <div class="contact-info">
+          <p><strong>Dirección:</strong></p>
+          <p>Calle Ficticia 123, Ciudad</p>
+          <p><strong>Horario de Atención:</strong></p>
+          <p>Lunes a Viernes<br>9:00 AM - 6:00 PM</p>
+        </div>
+        <div class="card-footer">
+          <span class="availability">Disponible presencial</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección de Asuntos -->
+    <div class="topics-section">
+      <h2>¿En qué podemos ayudarte?</h2>
+      <div class="topics-grid">
+        <div class="topic-item">
+          <i class="fas fa-tools"></i>
+          <span>Soporte Técnico</span>
+        </div>
+        <div class="topic-item">
+          <i class="fas fa-question-circle"></i>
+          <span>Consultas Generales</span>
+        </div>
+        <div class="topic-item">
+          <i class="fas fa-handshake"></i>
+          <span>Colaboraciones</span>
+        </div>
+        <div class="topic-item">
+          <i class="fas fa-star"></i>
+          <span>Feedback</span>
+        </div>
+        <div class="topic-item">
+          <i class="fas fa-ellipsis-h"></i>
+          <span>Otros</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Formulario de Contacto -->
+    <div class="contact-form-section">
+      <h2>Envíanos un Mensaje</h2>
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Nombre completo</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject">Asunto</label>
+          <select id="subject" name="subject" required>
+            <option value="">Selecciona un asunto</option>
+            <option value="soporte">Soporte Técnico</option>
+            <option value="consulta">Consultas Generales</option>
+            <option value="colaboracion">Colaboraciones</option>
+            <option value="feedback">Feedback</option>
+            <option value="otro">Otros</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">
+          <i class="fas fa-paper-plane"></i>
+          Enviar Mensaje
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Simular envío del formulario
+      const submitBtn = this.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+      submitBtn.disabled = true;
+      
+      setTimeout(() => {
+        submitBtn.innerHTML = '<i class="fas fa-check"></i> ¡Enviado!';
+        submitBtn.style.backgroundColor = '#059862';
+        
+        setTimeout(() => {
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
+          submitBtn.style.backgroundColor = '';
+          this.reset();
+        }, 2000);
+      }, 1500);
+    });
+  </script>
+</body>
+</html>
